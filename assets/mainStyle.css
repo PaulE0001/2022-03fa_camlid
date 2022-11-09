@@ -65,6 +65,7 @@ header #headerTop {
 
 	background-color: rgba( var(--themeBlue, 46, 49, 146), 1 );
 }
+	/* ### LOGO and TOP BUTTONS */
 	h1 img {height: 3rem;}
 	header button {
 		height: 100%;
@@ -76,6 +77,7 @@ header #headerTop {
 		grid-area: buttons;
 		width: calc( (3rem * 2) + 1rem );
 	}
+	/* ### NAV */
 	nav {
 		position: absolute;
 		width: 100vw;
@@ -103,6 +105,25 @@ header #headerTop {
 			}
 			/* Admittedly, there's likely a more graceful means to do this that would be scalable. But this is a prototype and this is as far as the menu is going to go. I'll allow it to stick to this. Use JS to make it more expandable in the future? */
 			nav ul ul a {padding-left: 3rem}
+
+
+/* ## PROTOTYPE ASIDE */
+/* aside {
+	position: relative;
+	z-index: 1;
+} */
+/* ## PAGE DARKEN */
+#pageDarken {
+	position: absolute;
+	top: 0;
+	width: 100vw; height: 100vh;
+
+	background-color: rgba(0, 0, 0, 0.5);
+}
+	#pageDarken.disabled {
+		background-color: rgba(0, 0, 0, 0);
+		pointer-events: none;
+	}
 
 
 

@@ -1,13 +1,25 @@
 const headerTop = $("#headerTop");
 const nav = $("nav");
 const hamburgerMenu = $("#hamburgerMenu");
+const aside = $("aside");
+const pageDarken = $("#pageDarken");
 
-nav.css("transition", "transform var(--uniTrans_time_NoDel)")
-hamburgerMenu.click( () => {
-	nav.toggleClass("foldOut_top");
-} );
+/* Set up shop. Adding these transitions now rather than in the CSS allows for them to *not* be seen when we first load the page.
+Is there a mroe graceful way to do this directly through the CSS? Probably. */
+nav.css("transition", "transform var(--uniTrans_time_NoDel)");
+pageDarken.css("transition", "var(--uniTrans)");
 
 nav.css( "top", headerTop.outerHeight() );
+
+hamburgerMenu.click( () => {
+	nav.toggleClass("foldOut_top");
+	pageDarken.toggleClass("disabled");
+} );
+
+pageDarken.click( () => {
+	
+	if ( !nav.hasClass("foldOut_top") ) {}
+} );
 
 
 const shoppingBtn_graphic = $("#shoppingCartBtn .material-symbols-outlined");

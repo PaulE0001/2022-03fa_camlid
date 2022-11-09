@@ -1,5 +1,6 @@
 # #GENERAL WORK FODDER
 **/.vs/
+**/.vscode/
 *.code-workspace
 jsconfig.json
 .DS_Store
