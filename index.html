@@ -26,23 +26,25 @@
 
 <body id="homePage">
 	<header>
-		<h1>
-			<a href="/">
-				<img 
-				src="assets/images/camlid_logo.svg"
-				alt="CamLid" height="48">
-			</a>
-		</h1>
-
-		<div id="buttonContainer">
-			<button id="shoppingCartBtn">
-				<span class="material-symbols-outlined unfilled">shopping_cart</span>
-				<span class="badge setNone">1</span>
-			</button>
-			<button id="hamburgerMenu"><span class="material-symbols-outlined">menu</span></button>
+		<div id="headerTop">
+			<h1>
+				<a href="/">
+					<img 
+					src="assets/images/camlid_logo.svg"
+					alt="CamLid" height="48">
+				</a>
+			</h1>
+	
+			<div id="buttonContainer">
+				<button id="shoppingCartBtn">
+					<span class="material-symbols-outlined unfilled">shopping_cart</span>
+					<span class="badge setNone">1</span>
+				</button>
+				<button id="hamburgerMenu"><span class="material-symbols-outlined">menu</span></button>
+			</div>
 		</div>
 
-		<nav><ul>
+		<nav class="foldOut_top"><ul>
 			<li id="learnLink">
 				<a href="">Learn</a>
 				<ul>
@@ -52,7 +54,13 @@
 				</ul>
 			</li>
 			<li id="shopLink"><a href="">Shop</a></li>
-			<li id="customizeLink"><a href="">Customize</a></li>
+			<li id="customizeLink">
+				<a href="">Customize</a>
+				<ul>
+					<li><a href="">Express emojis</a></li>
+					<li><a href="">Image upload</a></li>
+				</ul>
+			</li>
 			<li id="homeLink"><a href="">Home</a></li>
 		</ul></nav>
 	</header>
@@ -67,5 +75,8 @@
 			<button>Click here or anywhere outside of this box to close it.</button>
 		</div>
 	</aside>
+
+
+	<div id="pageDarken"></div>
 </body>
 </html>

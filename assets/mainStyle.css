@@ -1,9 +1,11 @@
 /* # EXTERNAL STYLING */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap');
+
 .material-symbols-outlined {
 	user-select: none;
 }
 .material-symbols-outlined {
-	transition: font-variation-settings 0.5s var(--quick_easeout) 0s;
+	transition: font-variation-settings var(--uniTrans_timingOnly) 0s;
 	font-variation-settings:
 	'FILL' 1,
 	'wght' 400,
@@ -21,34 +23,49 @@
 
 /* # MODIFIERS */
 .setNone {display: none;}
+.foldOut_top {transform: translateY(-100%);}
 
 
 /* # GEN PURPOSE ROOT, HTML, and BODY STYLING */
 * {
 	box-sizing: border-box;
+
+	font-family: "Roboto Flex", sans-serif;
+	font-variation-settings: 'wght' 400;
 }
 :root {
 	--themeBlue: 46, 49, 146;
 	--themeRed: 237, 28, 36;
 	--quick_easeout: cubic-bezier(.12,.75,.50,1);
+		--uniTrans: all 0.5s var(--quick_easeout) 0s;
+			--uniTrans_unsetDelay: all 0.5s var(--quick_easeout);
+			--uniTrans_time_NoDel: 0.5s var(--quick_easeout) 0s;
+			--uniTrans_timingOnly: 0.5s var(--quick_easeout);
 }
 body {
+	position: relative;
 	margin: 0;
+
+	background-color: lightblue;
 }
+
+
 
 
 /* #  UNIVERSAL PAGE STRUCTURE */
 /* ## HEADER CONTENT */
-header {
+header #headerTop {
 	display: grid;
 		grid-template-columns: auto minmax(0, 1fr) auto auto;
 		grid-template-areas: "logo space nav buttons";
-	position: relative;
+	position: absolute;
+	width: 100vw;
 	padding: 1rem;
-	z-index: 2;
+	z-index: 3;
 
 	background-color: rgba( var(--themeBlue, 46, 49, 146), 1 );
 }
+	h1 img {height: 3rem;}
 	header button {
 		height: 100%;
 		aspect-ratio: 1/1;
@@ -57,29 +74,37 @@ header {
 		display: flex;
 		justify-content: space-between;
 		grid-area: buttons;
-		width: calc( (48px * 2) + 1rem );
+		width: calc( (3rem * 2) + 1rem );
 	}
-nav {
-	position: absolute;
-	top: 100%;
-	width: 100vw;
-	z-index: 1;
+	nav {
+		position: absolute;
+		width: 100vw;
+		z-index: 1;
+		background-color: white;
+	}
+		nav a {
+			transition: font-variation-settings var(--uniTrans_timingOnly) 0s;
 
-	background-color: white;
-}
-	nav a {
-		display: block;
-		padding: 1rem;
-	}
-	nav ul {
-		margin: 0;
-		list-style: none;
-	}
-		nav ul {
-			padding: 0;
+			display: block;
+			border-bottom: 1pt solid lightgray;
+			padding: 1rem;
+
+			color:rgba( var(--themeBlue, 46, 49, 146), 1 );
 		}
-		/* Admittedly, there's likely a more graceful means to do this that would be scalable. But this is a prototype and this is as far as the menu is going to go. I'll allow it to stick to this. */
-		nav ul ul a {padding-left: 3rem}
+			nav a:hover {
+				font-variation-settings: 'wght' 700;
+			}
+		nav ul {
+			margin: 0;
+			list-style: none;
+		}
+			nav ul {
+				padding: 0;
+			}
+			/* Admittedly, there's likely a more graceful means to do this that would be scalable. But this is a prototype and this is as far as the menu is going to go. I'll allow it to stick to this. Use JS to make it more expandable in the future? */
+			nav ul ul a {padding-left: 3rem}
+
+
 
 
 /* # GENERAL PAGE CONTENT */

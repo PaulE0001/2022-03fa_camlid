@@ -1,3 +1,15 @@
+const headerTop = $("#headerTop");
+const nav = $("nav");
+const hamburgerMenu = $("#hamburgerMenu");
+
+nav.css("transition", "transform var(--uniTrans_time_NoDel)")
+hamburgerMenu.click( () => {
+	nav.toggleClass("foldOut_top");
+} );
+
+nav.css( "top", headerTop.outerHeight() );
+
+
 const shoppingBtn_graphic = $("#shoppingCartBtn .material-symbols-outlined");
 const shoppingBtn_badge = $("#shoppingCartBtn .badge");
 
@@ -25,6 +37,6 @@ function clearCart() {
 }
 
 
-$("#shoppingCartBtn").click(() => {
+$("#shoppingCartBtn").click( () => {
 	shoppingBtn_graphic.toggleClass("unfilled");
-});
+} );
