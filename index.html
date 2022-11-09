@@ -24,35 +24,36 @@
 	<script defer src="assets/mainScript.js"></script>
 </head>
 
-<body>
+<body id="homePage">
 	<header>
-		<div id="headTop">
-			<h1>
-				<a href="/">
-					<img 
-					src="assets/images/camlid_logo.svg"
-					alt="CamLid" width="48">
-				</a>
-			</h1>
-	
+		<h1>
+			<a href="/">
+				<img 
+				src="assets/images/camlid_logo.svg"
+				alt="CamLid" height="48">
+			</a>
+		</h1>
+
+		<div id="buttonContainer">
 			<button id="shoppingCartBtn">
 				<span class="material-symbols-outlined unfilled">shopping_cart</span>
 				<span class="badge setNone">1</span>
 			</button>
-			<button><span class="material-symbols-outlined">menu</span></button>
+			<button id="hamburgerMenu"><span class="material-symbols-outlined">menu</span></button>
 		</div>
 
 		<nav><ul>
-			<li>
+			<li id="learnLink">
 				<a href="">Learn</a>
 				<ul>
-					<li><a href="">Why camera covers?</a></li>
+					<li><a href="">Why webcam covers?</a></li>
 					<li><a href="">Why us?</a></li>
-					<li><a href="">Different styles</a></li>
+					<li><a href="">Different cover styles</a></li>
 				</ul>
 			</li>
-			<li><a href="">Shop</a></li>
-			<li><a href="">Customize</a></li>
+			<li id="shopLink"><a href="">Shop</a></li>
+			<li id="customizeLink"><a href="">Customize</a></li>
+			<li id="homeLink"><a href="">Home</a></li>
 		</ul></nav>
 	</header>
 
