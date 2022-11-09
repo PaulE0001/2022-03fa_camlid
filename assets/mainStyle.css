@@ -33,6 +33,7 @@ img.emoji {
 
 /* # MODIFIERS */
 .setNone {display: none;}
+.overlaid {z-index: 2;}
 .foldIn_top {transform: translateY(-100%);}
 .foldIn_bottom {transform: translateY(100%);}
 	aside.foldIn_bottom {transform: translateY( calc(100% - 3rem) );}
@@ -57,8 +58,6 @@ body {
 	position: absolute;
 	margin: 0;
 	min-height: 200vh;
-
-	background-color: lightblue;
 
 	font-family: "Roboto Flex", sans-serif;
 	font-variation-settings: 'wght' 400;
@@ -202,6 +201,7 @@ aside {
 	position: absolute;
 	top: 0;
 	width: 100vw; height: 100vh;
+	z-index: 1;
 
 	background-color: rgba(0, 0, 0, 0.5);
 }
