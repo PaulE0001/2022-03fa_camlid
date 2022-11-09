@@ -4,7 +4,13 @@ const shoppingBtn_badge = $("#shoppingCartBtn .badge");
 let shoppingTally = Number( localStorage.getItem("shoppingTally") );
 shoppingBtn_badge.text(shoppingTally);
 
+if (shoppingTally > 0) {
+	shoppingBtn_graphic.removeClass("unfilled");
+	shoppingBtn_badge.removeClass("setNone");
+}
+
 function addToCart(toAdd) {
+	shoppingBtn_graphic.removeClass("unfilled");
 	shoppingBtn_badge.removeClass("setNone");
 	shoppingTally = shoppingTally + toAdd;
 	shoppingBtn_badge.text(shoppingTally);
