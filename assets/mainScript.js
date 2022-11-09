@@ -1,3 +1,5 @@
+twemoji.parse(document.body);
+
 const headerTop = $("#headerTop");
 const nav = $("nav");
 const hamburgerMenu = $("#hamburgerMenu");
@@ -11,14 +13,14 @@ pageDarken.css("transition", "var(--uniTrans)");
 
 nav.css( "top", headerTop.outerHeight() );
 
-hamburgerMenu.click( () => {
-	nav.toggleClass("foldOut_top");
+hamburgerMenu.on("click", () => {
+	nav.toggleClass("foldIn_top");
 	pageDarken.toggleClass("disabled");
 } );
 
-pageDarken.click( () => {
-	
-	if ( !nav.hasClass("foldOut_top") ) {}
+pageDarken.on("click", () => {
+	nav.addClass("foldIn_top");
+	pageDarken.addClass("disabled");
 } );
 
 
@@ -49,6 +51,6 @@ function clearCart() {
 }
 
 
-$("#shoppingCartBtn").click( () => {
+$("#shoppingCartBtn").on("click", () => {
 	shoppingBtn_graphic.toggleClass("unfilled");
 } );

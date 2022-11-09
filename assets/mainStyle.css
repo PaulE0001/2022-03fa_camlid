@@ -1,6 +1,9 @@
 /* # EXTERNAL STYLING */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap');
 
+/* ## MATERIAL ICONS
+
+  Transitions added to allow for animation. */
 .material-symbols-outlined {
 	user-select: none;
 }
@@ -19,11 +22,18 @@
 	'GRAD' 0,
 	'opsz' 48
 }
+/* # TWEMOJI */
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+ }
 
 
 /* # MODIFIERS */
 .setNone {display: none;}
-.foldOut_top {transform: translateY(-100%);}
+.foldIn_top {transform: translateY(-100%);}
 
 
 /* # GEN PURPOSE ROOT, HTML, and BODY STYLING */
