@@ -109,8 +109,3 @@ function clearCart() {
 	shoppingTally = 0;
 	localStorage.removeItem("shoppingTally");
 }
-
-
-$("#shoppingCartBtn").on("click", () => {
-	shoppingBtn_graphic.toggleClass("unfilled");
-} );

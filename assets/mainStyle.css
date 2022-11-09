@@ -68,6 +68,7 @@ body {
 
 /* #  UNIVERSAL PAGE STRUCTURE */
 /* ## HEADER CONTENT */
+header {position: fixed; z-index: 3;}
 header #headerTop, nav {box-shadow: 0 -0.5rem 1rem 1rem rgba(0, 0, 0, 0.25);}
 header #headerTop {
 	display: grid;
@@ -166,6 +167,12 @@ section.hero {
 		}
 
 
+/* ## MAIN */
+main {
+	padding-bottom: 1.5rem;
+}
+
+
 /* ## PROTOTYPE ASIDE */
 aside {
 	position: fixed;
@@ -198,7 +205,7 @@ aside {
 
 /* ## PAGE DARKEN */
 #pageDarken {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: 100vw; height: 100vh;
 	z-index: 1;
@@ -242,5 +249,38 @@ button {
 		color: white;
 		line-height: 100%;
 	}
+
+article div.copyWrap {padding-left: 1rem; padding-right: 1rem;}
+
+article div.articleBanner {
+	position: relative;
+	width: 100vw;
+}
+article div.articleBanner > * {position: relative;}
+article div.articleBanner div.bannerImg {
+	width: 100%; aspect-ratio: 16/9;
+	overflow: hidden;
+}
+article div.articleBanner img.bannerImg {
+	width: 100%; height: 100%;
+	object-fit: cover;
+}
+article h2 {
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	padding: 1rem;
+	z-index: 1;
+
+	background-color: rgba( var(--themeBlue, 46, 49, 146), 1 );
+	color: white;
+}
+
+article p {
+	margin-block-start: 2rem;
+	margin-block-end: 2rem;
+	line-height: 2;
+}
+
 strong {font-variation-settings: 'wght' 700;}
 section.hero strong em {text-decoration: underline;}
