@@ -1,0 +1,30 @@
+/* # EXTERNAL STYLING */
+.material-symbols-outlined {
+	user-select: none;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined.unfilled {font-variation-settings: 'FILL' 0}
+
+
+/* # GEN PURPOSE ROOT, HTML, and BODY STYLING */
+:root {
+	
+}
+body {
+	margin: 0;
+}
+
+
+/* # GENERAL PAGE CONTENT */
+h1 {
+	display: inline-block;
+	margin: 0;
+
+	line-height: 0;
+}

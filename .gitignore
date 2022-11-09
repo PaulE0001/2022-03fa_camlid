@@ -1,0 +1,13 @@
+# #GENERAL WORK FODDER
+**/.vs/
+*.code-workspace
+jsconfig.json
+.DS_Store
+
+
+# #IMAGE and IMAGE WORK FILES
+# #SVGs and ICOs are whitelisted due to their consistently light size.
+*.psd
+*.png
+*.jpg
+*.gif
