@@ -53,7 +53,7 @@ img.emoji {
 			--uniTrans_timingOnly: 0.5s var(--quick_easeout);
 }
 body {
-	position: relative;
+	position: absolute;
 	margin: 0;
 
 	background-color: lightblue;
@@ -64,6 +64,7 @@ body {
 
 /* #  UNIVERSAL PAGE STRUCTURE */
 /* ## HEADER CONTENT */
+header #headerTop, nav {box-shadow: 0 -0.5rem 1rem 1rem rgba(0, 0, 0, 0.25);}
 header #headerTop {
 	display: grid;
 		grid-template-columns: auto minmax(0, 1fr) auto auto;
@@ -77,15 +78,15 @@ header #headerTop {
 }
 	/* ### LOGO and TOP BUTTONS */
 	h1 img {height: 3rem;}
-	header button {
-		height: 100%;
-		aspect-ratio: 1/1;
-	}
 	header #buttonContainer {
 		display: flex;
 		justify-content: space-between;
 		grid-area: buttons;
 		width: calc( (3rem * 2) + 1rem );
+	}
+	header button {
+		height: 100%;
+		aspect-ratio: 1/1;
 	}
 	/* ### NAV */
 	nav {
@@ -116,6 +117,8 @@ header #headerTop {
 			/* Admittedly, there's likely a more graceful means to do this that would be scalable. But this is a prototype and this is as far as the menu is going to go. I'll allow it to stick to this. Use JS to make it more expandable in the future? */
 			nav ul ul a {padding-left: 3rem}
 
+
+/* ## HERO SECTION */
 
 /* ## PROTOTYPE ASIDE */
 /* aside {

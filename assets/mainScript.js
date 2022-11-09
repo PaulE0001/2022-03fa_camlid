@@ -1,17 +1,23 @@
 twemoji.parse(document.body);
 
-const headerTop = $("#headerTop");
-const nav = $("nav");
-const hamburgerMenu = $("#hamburgerMenu");
-const aside = $("aside");
-const pageDarken = $("#pageDarken");
+const 
+	headerTop = $("#headerTop"),
+	nav = $("nav"),
+	hamburgerMenu = $("#hamburgerMenu"),
 
-/* Set up shop. Adding these transitions now rather than in the CSS allows for them to *not* be seen when we first load the page.
-Is there a mroe graceful way to do this directly through the CSS? Probably. */
+	main = $("main"),
+
+	aside = $("aside"),
+
+	pageDarken = $("#pageDarken");
+
+/* Set up shop. Adding these transitions now rather than in the CSS allows for them to *not* be seen when we first load the page. Some of these styles also rely on dynamic variables that CSS cannot handle.
+Is there a more graceful way to do this directly through the CSS? Probably. */
 nav.css("transition", "transform var(--uniTrans_time_NoDel)");
 pageDarken.css("transition", "var(--uniTrans)");
 
 nav.css( "top", headerTop.outerHeight() );
+main.css("margin-top", headerTop.outerHeight() );
 
 hamburgerMenu.on("click", () => {
 	nav.toggleClass("foldIn_top");
@@ -24,8 +30,9 @@ pageDarken.on("click", () => {
 } );
 
 
-const shoppingBtn_graphic = $("#shoppingCartBtn .material-symbols-outlined");
-const shoppingBtn_badge = $("#shoppingCartBtn .badge");
+const 
+	shoppingBtn_graphic = $("#shoppingCartBtn .material-symbols-outlined"),
+	shoppingBtn_badge = $("#shoppingCartBtn .badge");
 
 let shoppingTally = Number( localStorage.getItem("shoppingTally") );
 shoppingBtn_badge.text(shoppingTally);
