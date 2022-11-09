@@ -17,12 +17,14 @@ const
 
 /* Set up shop. Adding these transitions now rather than in the CSS allows for them to *not* be seen when we first load the page. Some of these styles also rely on dynamic variables that CSS cannot handle.
 Is there a more graceful way to do this directly through the CSS? Probably. */
-nav.css("transition", "transform var(--uniTrans_time_NoDel)");
-aside.css("transition", "transform var(--uniTrans_time_NoDel)");
-pageDarken.css("transition", "var(--uniTrans)");
+jQuery( () => {
+	nav.css("transition", "transform var(--uniTrans_time_NoDel)");
+	aside.css("transition", "transform var(--uniTrans_time_NoDel)");
+	pageDarken.css("transition", "var(--uniTrans)");
 
-nav.css( "top", headerTop.outerHeight() );
-main.css("margin-top", headerTop.outerHeight() );
+	nav.css( "top", headerTop.outerHeight() );
+	main.css("margin-top", headerTop.outerHeight() );
+} )
 
 
 

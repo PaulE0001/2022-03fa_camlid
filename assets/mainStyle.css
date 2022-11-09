@@ -59,6 +59,8 @@ body {
 	margin: 0;
 	min-height: 200vh;
 
+	overflow-x: hidden;
+
 	font-family: "Roboto Flex", sans-serif;
 	font-variation-settings: 'wght' 400;
 }
@@ -99,6 +101,7 @@ header #headerTop {
 	nav {
 		position: absolute;
 		width: 100vw;
+		top: 5rem;
 		z-index: 1;
 		background-color: white;
 	}
@@ -169,6 +172,7 @@ section.hero {
 
 /* ## MAIN */
 main {
+	margin-top: 5rem;
 	padding-bottom: 1.5rem;
 }
 
