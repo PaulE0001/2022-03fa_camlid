@@ -19,6 +19,10 @@
 }
 
 
+/* # MODIFIERS */
+.setNone {display: none;}
+
+
 /* # GEN PURPOSE ROOT, HTML, and BODY STYLING */
 * {
 	box-sizing: border-box;
