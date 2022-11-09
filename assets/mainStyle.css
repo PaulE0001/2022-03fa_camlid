@@ -20,7 +20,12 @@
 
 
 /* # GEN PURPOSE ROOT, HTML, and BODY STYLING */
+* {
+	box-sizing: border-box;
+}
 :root {
+	--themeBlue: 46, 49, 146;
+	--themeRed: 237, 28, 36;
 	--quick_easeout: cubic-bezier(.12,.75,.50,1);
 }
 body {
@@ -35,3 +40,20 @@ h1 {
 
 	line-height: 0;
 }
+button {
+	position: relative;
+	cursor: pointer;
+}
+	button .badge {
+		position: absolute;
+		bottom: -42%;
+		right: -42%;
+		z-index: 1;
+		padding: 0.33rem;
+
+		background-color: rgba(var(--themeRed, 237, 28, 36), 1);
+		border-radius: 0.33rem;
+
+		color: white;
+		line-height: 100%;
+	}
