@@ -8,6 +8,8 @@ const
 	main = $("main"),
 
 	aside = $("aside"),
+		asideTrigger = $("aside > button"),
+		asideClose = $("aside button.close"),
 
 	pageDarken = $("#pageDarken");
 
@@ -27,6 +29,19 @@ hamburgerMenu.on("click", () => {
 pageDarken.on("click", () => {
 	nav.addClass("foldIn_top");
 	pageDarken.addClass("disabled");
+} );
+
+
+
+
+$(".scrollDown").on("click", (event) => {
+	let 
+		parent = $(event.target).parent(),
+		scrollEnd = parent.position().top + parent.outerHeight();
+
+	$('html,body').animate({
+		scrollTop: scrollEnd
+		},'slow', 'swing');
 } );
 
 
