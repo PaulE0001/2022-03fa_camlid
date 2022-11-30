@@ -84,6 +84,8 @@ pageDarken.on("click", () => {
 
 
 $("button.scrollDown").on("click", (event) => {
+	headerHeight = headerTop.innerHeight();
+	
 	let 
 		button = $(event.target),
 		/* Rather than scrolling directly to the immediate start of the next section, this is resolved to scroll to the top end of the button. This helps avoid some edge cases on mobile devices.
