@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		How to get the width of scroll
+		bar using JavaScript ?
+	</title>
+	
+	<style>
+		body {
+			text-align:center;
+		}
+		h1 {
+			color:green;
+		}
+		#div {
+			width:200px;
+			height:150px;
+			overflow:auto;
+			margin:auto;
+			text-align:justify;
+			border:1px solid black;
+		}
+		#GFG_UP {
+			font-size: 17px;
+			font-weight: bold;
+		}
+		#GFG_DOWN {
+			font-size: 24px;
+			font-weight: bold;
+			color: green;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<h1>GeeksforGeeks</h1>
+	
+	<p id = "GFG_UP"></p>
+	
+	<div id="div">
+		JavaScript has stormed the web technology and
+		nowadays small software ventures to fortune
+		500, all are using node js for web apps.
+		Recently wordpress.com has rewritten its
+		dashboard in javascript, paypal also chose to
+		rewrite some of its components in java script.
+		Be it google/twitter/facebook, javascript is
+		important for everyone. It is used in
+		applications like single page applications,
+		Geolocation APIs, net advertisements etc.
+	</div>
+	
+	<br>
+	
+	<button onclick = "GFG_FUN()">
+		click here
+	</button>
+	
+	<p id = "GFG_DOWN"></p>
+	
+	<script>
+		var element = document.getElementById('div');
+		var el_up = document.getElementById('GFG_UP');
+		var el_down = document.getElementById('GFG_DOWN');
+		
+		el_up.innerHTML = "Click on the button to get "
+					+ "the width of the scrollbar.";
+		
+		function GFG_FUN() {
+			el_down.innerHTML = element.offsetWidth
+						- element.clientWidth + "px";
+		}
+	</script>
+</body>
+
+</html>

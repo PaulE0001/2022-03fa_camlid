@@ -1,4 +1,6 @@
-twemoji.parse(document.body);
+
+
+
 
 
 const 
@@ -15,6 +17,11 @@ const
 	pageDarken = $("#pageDarken");
 
 
+let 
+	headerHeight,
+	scrollbarSize;
+
+
 /* Set up shop. Adding these transitions now rather than in the CSS allows for them to *not* be seen when we first load the page. Some of these styles also rely on dynamic variables that CSS cannot handle.
 Is there a more graceful way to do this directly through the CSS? Probably. */
 $( () => {
@@ -22,8 +29,12 @@ $( () => {
 	aside.css("transition", "transform var(--uniTrans_time_NoDel)");
 	pageDarken.css("transition", "var(--uniTrans)");
 
+	headerHeight = headerTop.innerHeight();
+
 	/* nav.css( "top", headerTop.outerHeight() );
 	main.css("margin-top", headerTop.outerHeight() ); */
+
+	twemoji.parse(document.body);
 } );
 
 
@@ -72,10 +83,16 @@ pageDarken.on("click", () => {
 
 
 
-$(".scrollDown").on("click", (event) => {
+$("button.scrollDown").on("click", (event) => {
+	headerHeight = headerTop.innerHeight();
+	
 	let 
-		parent = $(event.target).parent(),
-		scrollEnd = parent.position().top + parent.outerHeight();
+		button = $(event.target),
+		/* Rather than scrolling directly to the immediate start of the next section, this is resolved to scroll to the top end of the button. This helps avoid some edge cases on mobile devices.
+		Yes, there's probably a more graceful way to do this <:) */
+		scrollEnd = button.offset().top - headerHeight - Length.toPx(button, '1rem');
+		console.debug({scrollEnd: scrollEnd});
+		//scrollEnd = parent.position().top + parent.outerHeight();
 
 	$('html,body').animate({
 		scrollTop: scrollEnd
