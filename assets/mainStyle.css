@@ -238,6 +238,7 @@ button {
 	cursor: pointer;
 }
 	button.iconOnly {width: 3rem; height: 3rem;}
+	button * {pointer-events: none;}
 	button .emoji {width: 2rem; height: 2rem;}
 	button .badge {
 		position: absolute;
