@@ -5,6 +5,7 @@
 
   Transitions added to allow for animation. */
 .material-symbols-outlined {
+	-webkit-user-select: none;
 	user-select: none;
 }
 .material-symbols-outlined {
@@ -45,8 +46,9 @@ img.emoji {
 	box-sizing: border-box;
 }
 :root {
-	--themeBlue: 46, 49, 146;
-	--themeRed: 237, 28, 36;
+	--themeBlue: /*......*/  29,  66, 138;
+		--themeBlue_shade1:  27,  48,  88;
+	--themeRed: /*.......*/ 238,  39,  55;
 
 	--quick_easeout: cubic-bezier(.12,.75,.50,1);
 		--uniTrans: all 0.5s var(--quick_easeout) 0s;
@@ -114,9 +116,21 @@ header #headerTop {
 
 			color:rgba( var(--themeBlue, 46, 49, 146), 1 );
 		}
+			/* #### LAST BAR FIX */
+			nav > ul > li:last-child a {border-bottom: none;}
+			/* #### YOU-ARE-HERE INDICATOR */
+			body#homePage nav a.home.page {
+				background-color: rgba( var(--themeBlue, 46, 49, 146), 1 );
+				color: white;
+			}
 			nav a:hover {
 				font-variation-settings: 'wght' 700;
 			}
+			nav a:active {
+				background-color: rgba( var(--themeBlue_shade1, 27, 48, 88), 1 );
+				color: white;
+			}
+		
 		nav ul {
 			margin: 0;
 			list-style: none;
